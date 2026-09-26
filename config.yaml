@@ -1,0 +1,29 @@
+# BAF AI Letter System Configuration
+
+model:
+  ollama_url: "http://localhost:11434/api/chat"
+  name: "qwen3.5:9b"
+  temperature: 0.2
+  num_predict: 1200
+
+server:
+  port: 5050
+  host: "0.0.0.0"
+
+portal:
+  anythingllm_url: "http://127.0.0.1:3001"
+  port: 8080
+  host: "0.0.0.0"
+
+rag:
+  top_k_letters: 5
+  top_k_policy: 3
+  embedding_model: "bge-m3"
+
+paths:
+  dataset_dir: "dataset"
+  training_dir: "training"
+  knowledge_dir: "knowledge"
+  templates_dir: "templates"
+  memory_db: "letter_memory.db"
+  style_json: "user_style.json"
